@@ -1,0 +1,3 @@
+/cookbooks/
+.vagrant
+Vagrant_ssh_config
