@@ -13,7 +13,7 @@ dependencies:
       if [ -z "$(ls -A $HOME/.terraform)" ]; then
         cd $HOME/.terraform
         curl -LO https://dl.bintray.com/mitchellh/terraform/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
-        unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+        unzip -o terraform_${TERRAFORM_VERSION}_linux_amd64.zip
         rm terraform_${TERRAFORM_VERSION}_linux_amd64.zip
       fi
     - sudo cp -fR ~/.terraform/* /usr/local/bin
