@@ -22,8 +22,8 @@ dependencies:
 
 test:
    pre:
-     - cd terraform plan
-     - cd terraform apply
+     - terraform plan
+     - terraform apply
      - cp /etc/hosts .
      - sudo bash -c "cat hosts /tmp/hosts.txt | tee /etc/hosts"
    override:
