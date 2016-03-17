@@ -9,6 +9,7 @@ dependencies:
     - ~/.terraform
   pre:
     # circle ci error by knife old version
+    - gem clean knife-solo
     - gem install knife-solo
     - |
       mkdir -p $HOME/.terraform
