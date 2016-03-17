@@ -19,6 +19,8 @@ host = ENV['TARGET_HOST']
 
 # start added by yoshi for circleCI
 if ENV['CIRCLECI']
+   `echo "StrictHostKeyChecking no" >> ~/.ssh/config`
+   `echo "UserKnownHostsFile=/dev/null" >> ~/.ssh/config`
    options = Net::SSH::Config.for(host, ["~/.ssh/config"])
    options[:user] = "root"
 else
