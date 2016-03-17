@@ -8,6 +8,8 @@ dependencies:
   cache_directories:
     - ~/.terraform
   pre:
+    # circle ci error by knife old version
+    - gem install knife-solo
     - |
       mkdir -p $HOME/.terraform
       if [ -z "$(ls -A $HOME/.terraform)" ]; then
