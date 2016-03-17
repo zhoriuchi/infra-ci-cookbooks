@@ -32,6 +32,7 @@ test:
      # damedane
      - sudo sudo mv /home/ubuntu/.rvm/gems/ruby-2.0.0-p598/bin/knife /usr/bin/knife
      - knife -v 
+     - sleep 30
    override:
      - bundle exec knife solo prepare root@webapp
      - bundle exec knife solo cook root@webapp
