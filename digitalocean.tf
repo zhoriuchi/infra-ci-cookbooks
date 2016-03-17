@@ -8,6 +8,6 @@ resource "digitalocean_droplet" "webapp" {
    ssh_keys =  [ "${var.ssh_keys_id}" ]
 
    provisioner "local-exec" {
-      command = "echo ${digitalocean_droplet.webapp.ipv4_address} ${digitalocean_droplet.webapp.name} >> /tmp/host.txt"
+      command = "echo ${digitalocean_droplet.webapp.ipv4_address} ${digitalocean_droplet.webapp.name} >> /tmp/hosts.txt"
    }
 }
