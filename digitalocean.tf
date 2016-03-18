@@ -2,7 +2,8 @@ variable "ssh_keys_id" {}
 
 resource "digitalocean_droplet" "webapp" {
    image = "centos-7-0-x64"
-   name  = "webapp"
+   #name  = "webapp"
+   name  = "default"
    region = "sgp1"
    size   = "512mb"
    ssh_keys =  [ "${var.ssh_keys_id}" ]
