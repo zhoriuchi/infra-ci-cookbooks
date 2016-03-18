@@ -35,8 +35,10 @@ test:
      # Waiting new server
      - sleep 30
    override:
-     - bundle exec knife solo prepare root@webapp
-     - bundle exec knife solo cook root@webapp
+     - bundle exec knife solo prepare root@default
+     - bundle exec knife solo cook root@default
+     #- bundle exec knife solo prepare root@webapp
+     #- bundle exec knife solo cook root@webapp
      - exec rake spec
    post:
      ##- terraform plan -destroy
